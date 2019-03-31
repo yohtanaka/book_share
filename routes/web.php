@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-		return view('index');
-		});
+    return view('index');
+});
 
 Route::resource('book', 'BookController');
 
@@ -109,3 +109,13 @@ Route::get('BlueBook/hello2_5_2/{msg?}',function($msg = 'no message.'){
 		return $html;
 		}
 	  );
+=======
+    return view('welcome');
+});
+
+Route::resource('book', 'BookController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+>>>>>>> origin/nekonisi
