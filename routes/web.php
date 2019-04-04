@@ -1,14 +1,14 @@
 <?php
 
 /*
-	 |--------------------------------------------------------------------------
-	 | Web Routes
-	 |--------------------------------------------------------------------------
-	 |
-	 | Here is where you can register web routes for your application. These
-	 | routes are loaded by the RouteServiceProvider within a group which
-	 | contains the "web" middleware group. Now create something great!
-	 |
+   |--------------------------------------------------------------------------
+   | Web Routes
+   |--------------------------------------------------------------------------
+   |
+   | Here is where you can register web routes for your application. These
+   | routes are loaded by the RouteServiceProvider within a group which
+   | contains the "web" middleware group. Now create something great!
+   |
  */
 
 Route::get('/', function () {
@@ -23,7 +23,7 @@ Route::resource('book', 'BookController');
 Route::get('/BlueBook', function(){
 		return view('welcome');
 		}
-		);
+	  );
 
 Route::get('BlueBook/hello', function(){
 		return '
@@ -34,7 +34,7 @@ Route::get('BlueBook/hello', function(){
 		</body>
 		</html>';
 		}
-		);
+	  );
 
 // ヒアドキュメントを使用した文字列の出力(P34 2-4)
 // Route情報は後勝ち。
@@ -60,7 +60,7 @@ Route::get('BlueBook/hello2_4',function()
 		use($html){
 		return $html;
 		}
-		);
+	  );
 
 // パラメータを利用した表示(P36 2-5)
 // 第一引数に、パラメータを組み込んだURLを用意してあげる。
@@ -85,7 +85,7 @@ Route::get('BlueBook/hello2_5/{msg}',function($msg){
 
 		return $html;
 		}
-		);
+	  );
 
 // 任意パラメータを利用したサンプル
 
@@ -108,9 +108,13 @@ Route::get('BlueBook/hello2_5_2/{msg?}',function($msg = 'no message.'){
 		EOF;
 		return $html;
 		}
-		);
+	  );
 
 // コントローラを利用したサンプル
 
 Route::get('BlueBook/hello2_7','HelloController@index');
 Route::get('BlueBook/hello2_8/{id?}/{pass?}','HelloController2@index');
+
+// ルートパラメータの利用
+Route::get('BlueBook/hello2_10/{id?}/{pass?}', 'Hello3Controller@index');
+
