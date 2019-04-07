@@ -111,10 +111,15 @@ Route::get('BlueBook/hello2_5_2/{msg?}',function($msg = 'no message.'){
 	  );
 
 // コントローラを利用したサンプル
-
 Route::get('BlueBook/hello2_7','HelloController@index');
 Route::get('BlueBook/hello2_8/{id?}/{pass?}','HelloController2@index');
 
 // ルートパラメータの利用
 Route::get('BlueBook/hello2_10/{id?}/{pass?}', 'Hello3Controller@index');
 
+// 複数アクションの利用
+Route::get('BlueBook/hello2_11', 'Hello4Controller@index');
+Route::get('BlueBook/hello2_11/other', 'Hello4Controller@other');
+
+// シングルアクションコントローラの利用(__invoke関数)
+Route::get('BlueBook/hello2_13', 'SingleActionController');
