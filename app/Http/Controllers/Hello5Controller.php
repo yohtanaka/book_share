@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Reponse;
+use Illuminate\Http\Response;
 
 class Hello5Controller extends Controller
 {
-	public function index(\Illuminate\Http\Request $request, \Illuminate\Http\Response  $response) {
+	public function index(Request $request, Response  $response) {
 		$html = <<<EOF
 		<html>
 		<head>
