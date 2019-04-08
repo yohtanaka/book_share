@@ -123,3 +123,6 @@ Route::get('BlueBook/hello2_11/other', 'Hello4Controller@other');
 
 // シングルアクションコントローラの利用(__invoke関数)
 Route::get('BlueBook/hello2_13', 'SingleActionController');
+
+// リクエストとレスポンスの取得
+Route::get('BlueBook/hello2_15', 'Hello5Controller@index');
