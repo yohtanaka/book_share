@@ -126,3 +126,11 @@ Route::get('BlueBook/hello2_13', 'SingleActionController');
 
 // リクエストとレスポンスの取得
 Route::get('BlueBook/hello2_15', 'Hello5Controller@index');
+
+// テンプレートの利用
+Route::get('BlueBook/hello3_1', function() { return view('hello.index'); });
+
+// コントローラを利用したViewの利用
+//Route::get('BlueBook/hello3_3', 'UseTemplateController@index');
+Route::get('BlueBook/hello3_3/{id?}', 'UseTemplateController@index');
+Route::get('BlueBook/hello3_4', 'UseTemplateController@useRequest');
